@@ -7,6 +7,10 @@
     display:flex;
     flex:1
 }
+.containerOut{
+    transition: transform 1s;
+    transform: translateX(-100%);
+}
 .logo{
     margin-right: 2rem;
 }

@@ -29,6 +29,7 @@ interface ChallengesContextData{
     resetChallenge: () => void
     completeChallenge: () => void
     closeLevelUpModal: () => void
+    login: (name: string) => void
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData)
@@ -39,7 +40,6 @@ export function ChallengesProvider({children, ...rest}:ChallengesProviderProps){
     const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0)
     const [activeChallenge, setActiveChallenge] = useState(null)
     const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false)
-    const [isLoggedIn, setIsLoggedIn] = useState(true)
     const [name, setName] = useState('')
 
     const experienceToNextLevel = Math.pow((level + 1) * 4,2)
@@ -65,7 +65,6 @@ export function ChallengesProvider({children, ...rest}:ChallengesProviderProps){
 
     function login(name: string){
         setName(name)
-        setIsLoggedIn(true)
     }
 
     function startNewChallenge(){
@@ -119,10 +118,11 @@ export function ChallengesProvider({children, ...rest}:ChallengesProviderProps){
            completeChallenge,
            closeLevelUpModal,
            name,
+           login,
             }}
         >
            {children}
-           {isLoggedIn && <Login/>}
+           <Login/>
            {isLevelUpModalOpen && <LevelUpModal/>}
         </ChallengesContext.Provider> 
     )
