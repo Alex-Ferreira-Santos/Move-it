@@ -7,6 +7,9 @@
     display:flex;
     flex:1
 }
+.logo{
+    margin-right: 2rem;
+}
 .welcome{
     display: flex;
     flex:1;
@@ -20,4 +23,50 @@
 .text{
     color: var(--white);
     font-size: 36px;
+    margin-bottom: 2rem;
+    margin-top: 2rem
+}
+.login{
+    color: var(--text-highlight);
+    margin-left: 1rem;
+}
+.github{
+    display: flex;
+    align-items: center;
+}
+.input{
+    color: var(--text-highlight);
+    background: linear-gradient(90deg, var(--blue-dark) 0%, rgba(73, 83, 184, 0.2) 100%);
+    border-radius: 5px 0px 0px 5px;
+    border: 0;
+    height: 4rem;
+    padding-inline-start: 2rem;
+    outline: none
+}
+
+.input:hover{
+    border: 1px solid #414AA3
+}
+
+
+.input::-webkit-input-placeholder {
+    color: var(--text-highlight);
+}
+
+.button{
+    background: var(--blue-dark);
+    border-radius: 0px 5px 5px 0px;
+    border: 0;
+    height: 4rem;
+    width: 4rem;
+}
+
+.buttonColor{
+    background: var(--green)
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
 }
