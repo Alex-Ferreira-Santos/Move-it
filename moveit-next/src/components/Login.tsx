@@ -25,19 +25,19 @@ export function Login(){
                         setPlaceholder('')
                     }} onBlur={()=>{
                         setPlaceholder('Digite seu username')
-                        if(document.getElementById('input').value.length == 0){
+                        if((document.getElementById('input')as HTMLInputElement).value.length == 0){
                             setColor('')
                         }
                     }} onChange={() => {
-                        if(document.getElementById('input').value.length > 0){
+                        if((document.getElementById('input')as HTMLInputElement).value.length > 0){
                             setColor(styles.buttonColor)
                         }
                     }}
                     />
                     <button className={`${styles.button} ${color}`} onClick={()=>{
-                        const name = document.getElementById('input').value
-                        setName(name)
-                        if(document.getElementById('input').value.trim() !== ''){
+                        const nome = (document.getElementById('input') as HTMLInputElement).value
+                        setName(nome)
+                        if((document.getElementById('input') as HTMLInputElement).value.trim() !== ''){
                             setScreen(styles.containerOut)
                             login(name)
                         }

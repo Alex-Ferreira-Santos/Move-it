@@ -30,6 +30,7 @@ interface ChallengesContextData{
     completeChallenge: () => void
     closeLevelUpModal: () => void
     login: (name: string) => void
+    setName: (name: string) => void
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData)
@@ -119,6 +120,7 @@ export function ChallengesProvider({children, ...rest}:ChallengesProviderProps){
            closeLevelUpModal,
            name,
            login,
+           setName,
             }}
         >
            {children}
