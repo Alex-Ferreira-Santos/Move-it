@@ -39,8 +39,9 @@ export function Login(){
                         setName(nome)
                         if((document.getElementById('input') as HTMLInputElement).value.trim() !== ''){
                             setScreen(styles.containerOut)
-                            login(name)
+                            login(nome)
                         }
+                        console.log(nome)
                     }}><img src="icons/arrow.svg" alt="arrow"/></button>
                 </div>
                 

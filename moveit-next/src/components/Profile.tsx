@@ -3,7 +3,8 @@ import { ChallengesContext } from '../context/ChallengesContext'
 import styles from '../styles/components/Profile.module.css'
 
 export function Profile(){
-    const { level,name,setName } = useContext(ChallengesContext)
+    const { level, name,setName } = useContext(ChallengesContext)
+    
     return(
         <div className={styles.profileContainer}>
             <img src={`https://github.com/${name}.png`} alt="imagem de perfil" onError={()=>{
